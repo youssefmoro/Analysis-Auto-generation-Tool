@@ -36,6 +36,11 @@ public class JobController {
         this.parseLogsJob = parseLogsJob;
     }
 
+    @GetMapping("/hello")
+    public String hello(){
+        return "hello world!";
+    }
+    
     @PostMapping("/startJobForDirectoryPath")
     public ResponseEntity<ResponseDto> startJobForThisPath(@RequestBody @NotNull PathDto path) {
         ResponseDto responseDto = new ResponseDto();
